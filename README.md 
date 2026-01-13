@@ -1,0 +1,104 @@
+Travel API 2 🛫
+A Node.js-based travel API with PostgreSQL database, designed for managing travel and flight-related data.
+
+Project Status
+🚧 Early Development - This project is in its initial stages with basic structure and setup files in place.
+
+
+To test use :
+
+curl http://localhost:3000/search/dubai[It can take dynamic location value]
+
+
+📁 Project Structure
+text
+travel-api-2/
+├── server.js                 # Main application server file
+├── Dockerfile               # Docker container configuration
+├── docker-compose.yml       # Multi-container Docker setup
+├── schema.sql              # Database schema definition
+├── init-db.sh              # Database initialization script
+├── package.json            # Node.js dependencies and scripts
+├── package-lock.json       # Dependency lock file
+├── .env                    # Environment variables (API keys, etc.)
+├── test-db.js              # Database connection testing
+└── node_modules/           # Node.js dependencies (not in version control)
+🛠️ Technology Stack
+Backend: Node.js (JavaScript 60.6%)
+
+Database: PostgreSQL (PLpgSQL 37.9%)
+
+Containerization: Docker & Docker Compose
+
+Other: 1.5% (configuration files, scripts, etc.)
+
+🚀 Getting Started
+Prerequisites
+Docker and Docker Compose
+
+Node.js (if running without Docker)
+
+PostgreSQL client (optional)
+
+Quick Start with Docker
+Clone the repository
+
+bash
+git clone https://github.com/asrar000/travel-api-2.git
+cd travel-api-2
+Set up environment variables
+
+Update the .env file with your API keys and database credentials
+
+Start the application
+
+bash
+docker-compose up
+Initialize the database
+
+bash
+# The init-db.sh script should run automatically via Docker Compose
+# Or run manually if needed
+Manual Setup (Without Docker)
+Install dependencies
+
+bash
+npm install
+Set up PostgreSQL database
+
+bash
+# Create database and user
+psql -U postgres -f schema.sql
+Configure environment
+
+bash
+cp .env.example .env  # If an example exists
+# Edit .env with your credentials
+Start the server
+
+bash
+node server.js
+🗄️ Database Schema
+The database schema is defined in schema.sql. Based on the commit history mentioning "flight details," this API likely includes:
+
+Flight information tables
+
+Travel booking data
+
+User management
+
+Itinerary tracking
+
+🔧 API Endpoints
+Specific endpoints will be documented as the API develops. Currently working on flight details functionality based on commit history.
+
+📝 Recent Development
+Latest Commit: "Try a fix for flight details" - January 13, 2026
+
+The project is actively being worked on with recent fixes and improvements to flight data handling.
+
+🤝 Contributing
+As this project is in early development, contribution guidelines will be established as the codebase matures.
+
+📄 License
+License information will be added as the project develops.
