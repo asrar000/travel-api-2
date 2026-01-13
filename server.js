@@ -326,7 +326,8 @@ app.get('/search/:locationname', async (req, res) => {
                 const fromId = `${airportCode}.AIRPORT`;
                 
                 console.log(`🛫 Searching flights to: ${fromId}`);
-                const flightResults = await bookingAPI.searchFlights('JFK.AIRPORT', fromId);
+                const departureCode = req.query.from ? `${req.query.from}.AIRPORT` : 'JFK.AIRPORT';
+                const flightResults = await bookingAPI.searchFlights(departureCode, fromId);
                 
                 if (flightResults.data && flightResults.data.flightOffers) {
                     console.log(`✅ Found ${flightResults.data.flightOffers.length} flight offers`);
